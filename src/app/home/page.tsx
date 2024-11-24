@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -75,7 +75,8 @@ export default function Home() {
           Explore Projects
         </h3>
 
-        <button
+        <Link
+          href="/audio-post"
           className={`
             px-6 py-[0.45rem] 
             bg-gray-500 
@@ -87,8 +88,9 @@ export default function Home() {
           `}
         >
           Audio Post
-        </button>
-        <button
+        </Link>
+        <Link
+          href="/music"
           className={`
             px-6 py-[0.45rem]
             bg-gray-500 
@@ -99,7 +101,7 @@ export default function Home() {
           `}
         >
           Music
-        </button>
+        </Link>
       </div>
 
 
