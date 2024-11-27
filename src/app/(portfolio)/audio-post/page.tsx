@@ -7,6 +7,7 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  console.log('Firebase API Key:', process.env.NEXT_PUBLIC_FIREBASE_API_KEY);
   const title: string = "Audio Post-Production";
   const subtitle: string =
     "VO Recordings, Dialogue clean-ups, Mixing for TV, Radio and Socials for top-tier clients: Spotify, Paddy Power, Audible, Tonies (offline showreel available upon request)";
