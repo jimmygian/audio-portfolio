@@ -28,7 +28,7 @@ export default function Home() {
           text-xl
         `}
       >
-        Audio Engineer
+        Audio Engineer NEW
       </h3>
 
       {/* Summary */}
