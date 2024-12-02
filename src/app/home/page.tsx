@@ -5,106 +5,58 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div
-      className={`
-          flex 
-          flex-col
-          justify-center
-          items-center
-          m-4
-          sm:m-2`}
-    >
+    <>
       {/* Title / Subtitle */}
       <h1
         className={`
+          font-monsterratRegular
           font-bold
-          text-4xl
+          text-[2rem] sm:text-[3rem] landscape-sm:text-[2rem]
+          font-[700]
+          tracking-tighter
+          max-w-[700px] landscape-sm:max-w-[75%]
+          mx-5
         `}
       >
-        Dimitris Giannoulis
+        Crafting Exceptional Audio Experiences
       </h1>
       <h3
         className={`
-          text-xl
+          mt-10
+          text-[1.05rem] landscape-sm:text-[1.05rem] sm:text-xl 
+          leading-7 landscape-sm:leading-5 sm:leading-8 
+          font-monsterratRegular
+          max-w-[800px] landscape-sm:max-w-[65%]
+          mx-4 sm:mx-5
         `}
       >
-        Audio Engineer NEW
+        Audio Engineer & musician with 3+ years of industry experience in Audio
+        Post. Recording, creative sound designing, and mixing for TV, Radio, and
+        social media.
       </h3>
 
       {/* Summary */}
+
       <div
         className={`
-            flex
-            flex-col
-            my-16
-            mx-2
-            max-w-[800px]
-        `}
+      mt-12
+      font-monsterratRegular
+      flex
+      flex-col sm:flex-row min-[420px]:flex-row landscape-sm:flex-row
+      flex-wrap  
+    `}
       >
-        <p className={`mb-2`}>
-          Audio Engineer & musician with 3+ years of industry experience in
-          Audio Post.
-        </p>
-        <p className={`mb-12`}>
-          Recording, creative sound designing, and mixing for TV, Radio, and
-          social media. Creative experience includes producing music for artists
-          and composing bespoke music for visual media.
-        </p>
-        <p className={``}>
-          Worked in projects for top-tier clients including Spotify, Audible,
-          Tonies, and Paddy Power.
-        </p>
-      </div>
-
-      {/* 'Explore' Buttons */}
-      <div
-        className={`
-          flex
-          flex-col
-          justify-center
-          items-center
-          m-2
-        `}
-      >
-        <h3
-          className={`
-            text-sm
-            mb-2
-          `}
-        >
-          Explore Projects
-        </h3>
-
-        <Link
-          href="/audio-post"
-          className={`
-            px-6 py-[0.45rem] 
-            bg-gray-500 
-            text-white 
-            rounded-xl 
-            hover:bg-gray-600 
-            mb-1
-            text-lg 
-          `}
-        >
-          Audio Post
+        <Link href="/audio-post">
+          <button className="m-2 w-[8.3rem] h-[3.1rem] bg-slate-500">
+            Explore Work
+          </button>
         </Link>
-        <Link
-          href="/music"
-          className={`
-            px-6 py-[0.45rem]
-            bg-gray-500 
-            text-white 
-            rounded-xl 
-            hover:bg-gray-600
-            text-lg 
-          `}
-        >
-          Music
+        <Link href="/">
+          <button className="m-2 w-[8.2rem] h-[3rem] border-[0.1em] border-black">
+            Contact
+          </button>
         </Link>
       </div>
-
-
-    </div>
+    </>
   );
 }

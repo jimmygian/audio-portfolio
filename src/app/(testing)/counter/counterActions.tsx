@@ -1,13 +1,12 @@
 "use client"
 
-import React from 'react'
 import { useAppDispatch, useAppSelector } from '@/store/reduxHooks'
 import { getCounterValue } from '@/store/features/counter/counterSelector'
 import { decrement, increment } from '@/store/features/counter/counterSlice'
 
 const CounterActions = () => {
   // Type the selector and state
-  const count = useAppSelector((state) => getCounterValue(state))
+  const count = useAppSelector(getCounterValue)
 
   // Type the dispatch hook
   const dispatch = useAppDispatch()

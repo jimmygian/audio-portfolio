@@ -2,7 +2,7 @@ import ModeBtn from "../_components/modeBtn";
 import SocialLinks from "../_components/socialLinks";
 
 export const metadata = {
-  title: "Dimitris | Audio Portfolio",
+  title: "Dimitris Gian | Home",
   description:
     "Dimitris is a professional Audio Engineer with programming experience.",
 };
@@ -21,6 +21,7 @@ export default function HomeLayout({
         items-center 
         justify-center 
         text-center
+        gap-2
            `}
     >
       {children}

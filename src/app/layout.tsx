@@ -6,14 +6,30 @@ import Navbar from "@/app/_components/navbar";
 
 // FONTS
 const geistSans = localFont({
-  src: "./_utils/fonts/GeistVF.woff",
+  src: "../../public/fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./_utils/fonts/GeistMonoVF.woff",
+  src: "../../public/fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
+});
+
+const monsterratRegular = localFont({
+  src: [{
+    path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
+    weight: "100 200 300 400 500 600 700 800 900",
+  }],
+  variable: "--font-monsterrat-regular"
+});
+
+const monsterratItalic = localFont({
+  src: [{
+    path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
+    weight: "100 200 300 400 500 600 700 800 900",
+  }],
+  variable: "--font-monsterrat-italic"
 });
 
 // METADATA
@@ -34,7 +50,19 @@ export default function RootLayout({
     <StoreProvider>
       <html lang="en">
         <body
-          className={`relative h-screen flex justify-center text-center ${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`
+            relative 
+            h-screen 
+            flex 
+            justify-center 
+            text-center 
+            antialiased
+            // FONTS //
+            ${monsterratRegular.variable} 
+            ${monsterratItalic.variable} 
+            ${geistSans.variable} 
+            ${geistMono.variable} 
+            `}
         >
           <Navbar />
           <main className={`w-full`}>{children}</main>
