@@ -17,10 +17,8 @@ const config: Config = {
         monsterratItalic: ["var(--font-monsterrat-italic)"],
       },
       screens: {
-        "landscape-sm": {
-          raw: "(orientation: landscape) and (max-width: 1000px)",
-        }, // max-width 1024px for tablet/phone landscape
-      },
+        'landscape-sm': { 'raw': '(orientation: landscape) and (max-width: 1000px)' },
+      }
     },
     fontWeight: {
       100: "100",
@@ -32,7 +30,7 @@ const config: Config = {
       700: "700",
       800: "800",
       900: "900",
-    },
+    }
   },
   plugins: [],
 };
