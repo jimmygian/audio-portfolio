@@ -5,14 +5,12 @@ export default function SocialLinks() {
   return (
     <div
     className={`
-        flex
-        justify-center
-        items-end
+        w-full
         fixed
         bottom-10
       `}
   >
-    <div className="flex flex-grow justify-end min-[100px]:space-x-4 sm:space-x-11">
+    <div className="flex flex-grow justify-center min-[100px]:space-x-4 sm:space-x-11">
       {/* LinkedIn */}
       <a
         href="https://www.linkedin.com/in/jimmygian"

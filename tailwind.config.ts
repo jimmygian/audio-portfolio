@@ -18,6 +18,7 @@ const config: Config = {
       },
       screens: {
         'landscape-sm': { 'raw': '(orientation: landscape) and (max-width: 1000px)' },
+        'xs': '380px',
       }
     },
     fontWeight: {
@@ -32,6 +33,17 @@ const config: Config = {
       900: "900",
     }
   },
+  variants: {
+    extend: {
+      backgroundColor: ['xs'], 
+      textColor: ['xs'],
+      fontSize: ['xs'],
+      lineHeight: ['xs'],
+      paddingEnd: ['xs'],
+      // ... add other variants as needed
+    },
+  },
   plugins: [],
+  darkMode: 'class',
 };
 export default config;

@@ -2,26 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
+html {
+  scroll-behavior: smooth !important;
 }
 
-@media (prefers-color-scheme: dark) {
+
+
+:root {
+  --background: #ffffff;
+  --border: #171717;
+  --foreground: #171717;
+  --full-width: calc(100vw - 10px); 
+  --header-height: 0px;
+}
+
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --border: #ededed;
+}
+
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --border: #ededed;
   }
+} */
+
+.vh100 {
+  height: calc(100vh - var(--header-height));
+  /* height: calc(100dvh - var(--header-height)); */
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  border-color: var(--border);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-} */
+}
+
+/* CUSTOM TAILWIND UTILITIES */
+
+.full-center {
+  @apply m-0 p-0 flex flex-col min-h-screen items-center justify-center text-center;
+}

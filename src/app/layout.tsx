@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
+import ThemeSwitch from "./_components/themeSwitch";
+import ThemeProvider from "./_components/themeProvider";
+
 // import Navbar from "@/app/_components/navbar";
 
 // FONTS
@@ -17,19 +20,23 @@ const geistMono = localFont({
 });
 
 const monsterratRegular = localFont({
-  src: [{
-    path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
-    weight: "100 200 300 400 500 600 700 800 900",
-  }],
-  variable: "--font-monsterrat-regular"
+  src: [
+    {
+      path: "../../public/fonts/Montserrat-VariableFont_wght.ttf",
+      weight: "100 200 300 400 500 600 700 800 900",
+    },
+  ],
+  variable: "--font-monsterrat-regular",
 });
 
 const monsterratItalic = localFont({
-  src: [{
-    path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
-    weight: "100 200 300 400 500 600 700 800 900",
-  }],
-  variable: "--font-monsterrat-italic"
+  src: [
+    {
+      path: "../../public/fonts/Montserrat-Italic-VariableFont_wght.ttf",
+      weight: "100 200 300 400 500 600 700 800 900",
+    },
+  ],
+  variable: "--font-monsterrat-italic",
 });
 
 // METADATA
@@ -48,24 +55,22 @@ export default function RootLayout({
 }>) {
   return (
     <StoreProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body
           className={`
-            relative 
-            h-screen 
-            flex 
-            justify-center 
-            text-center 
-            antialiased
-            // FONTS //
-            ${monsterratRegular.variable} 
-            ${monsterratItalic.variable} 
-            ${geistSans.variable} 
-            ${geistMono.variable} 
-            `}
+              relative
+              // FONTS //
+              ${monsterratRegular.variable} 
+              ${monsterratItalic.variable} 
+              ${geistSans.variable} 
+              ${geistMono.variable} 
+              `}
         >
-          {/* <Navbar /> */}
-          <main className={`w-full`}>{children}</main>
+          <ThemeProvider>
+            {/* <Navbar /> */}
+            <main className={`full-center`}>{children}</main>
+            <ThemeSwitch />
+          </ThemeProvider>
         </body>
       </html>
     </StoreProvider>

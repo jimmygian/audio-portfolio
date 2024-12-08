@@ -1,4 +1,3 @@
-import ModeBtn from "../_components/modeBtn";
 import SocialLinks from "../_components/socialLinks";
 
 export const metadata = {
@@ -15,19 +14,10 @@ export default function HomeLayout({
   return (
     <div
       className={`
-        flex 
-        flex-col 
-        h-[100%] 
-        items-center 
-        justify-center 
-        text-center
-        gap-2
+        w-[100%]
            `}
     >
       {children}
-
-      {/* MODE Dark/Light */}
-      <ModeBtn />
 
       {/* Social Links */}
       <SocialLinks />
