@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { StoreProvider } from "@/store/StoreProvider";
-import Navbar from "@/app/_components/navbar";
+// import Navbar from "@/app/_components/navbar";
 
 // FONTS
 const geistSans = localFont({
@@ -64,7 +64,7 @@ export default function RootLayout({
             ${geistMono.variable} 
             `}
         >
-          <Navbar />
+          {/* <Navbar /> */}
           <main className={`w-full`}>{children}</main>
         </body>
       </html>
