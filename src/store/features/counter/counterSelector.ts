@@ -1,5 +1,5 @@
 import { createSelector } from "@reduxjs/toolkit";
-import { RootState } from "@/store/store";
+import { RootState } from "@/types";
 
 export const getCounterValue = createSelector(
   // input selectors (we can have more than 1 of them)

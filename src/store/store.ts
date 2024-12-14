@@ -14,7 +14,9 @@ const store = configureStore({
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
-export type RootState = ReturnType<typeof rootReducer> // Extract the state type
+// These are imported in types/redux.d.ts and referenced from there in all other files
+export type RootState = ReturnType<typeof rootReducer> 
 export type AppDispatch = typeof store.dispatch
+
 export default store
 
