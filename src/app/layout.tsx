@@ -5,8 +5,6 @@ import { StoreProvider } from "@/store/StoreProvider";
 import ThemeSwitch from "./_components/themeSwitch";
 import ThemeProvider from "./_components/themeProvider";
 
-// import Navbar from "@/app/_components/navbar";
-
 // FONTS
 const geistSans = localFont({
   src: "../../public/fonts/GeistVF.woff",
@@ -67,7 +65,6 @@ export default function RootLayout({
               `}
         >
           <ThemeProvider>
-            {/* <Navbar /> */}
             <main className={`full-center`}>{children}</main>
             <ThemeSwitch />
           </ThemeProvider>

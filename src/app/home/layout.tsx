@@ -1,4 +1,5 @@
 import SocialLinks from "../_components/socialLinks";
+// import Navbar from "@/app/_components/navbar";
 
 export const metadata = {
   title: "Dimitris Gian | Home",
@@ -21,6 +22,7 @@ export default function HomeLayout({
 
       {/* Social Links */}
       <SocialLinks />
+      {/* <Navbar /> */}
     </div>
   );
 }
