@@ -476,3 +476,16 @@ const exampleUser: UserDataType = {
   },
 };
 ```
+
+<br>
+
+
+## `lib/` Directory
+
+The `lib/` directory contains custom hooks and general util functions used throughout the app.
+It contains a `lib/customHooks` folder that all custom hook files will be stored. It also contains 
+a `utils/` folder that contains functions such as `debounce()` used in many files.
+
+For the moment,  `lib/customHooks` folder only includes 1 file (`hooks.ts`) that contains all the custom
+hooks, but in the future it will be segmented into different files that contain hooks for specific functionality.
+

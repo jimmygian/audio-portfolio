@@ -1,12 +1,12 @@
 import React from "react";
 import Link from "next/link";
-import TrackedPage from "@/app/_components/trackedPage";
+// import TrackedPage from "@/app/_components/trackedPage";
 
 export default function Home() {
   return (
-    <TrackedPage
-      pageName="home"
-      sections={["section1", "section2", "section3"]}
+    <div
+      // pageName="home"
+      // sections={["section1", "section2", "section3"]}
       className="h-full w-full"
     >
       <div id="section1" className="full-center">
@@ -68,6 +68,6 @@ export default function Home() {
       <div id="section3" className="full-center bg-slate-600">
         HI!
       </div>
-    </TrackedPage>
+    </div>
   );
 }
