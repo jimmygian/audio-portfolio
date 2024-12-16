@@ -1,12 +1,15 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
+import TrackedPage from "@/app/_components/trackedPage";
 
 export default function Home() {
   return (
-    <div className="h-full w-full">
-      <div className="full-center">
+    <TrackedPage
+      pageName="home"
+      sections={["section1", "section2", "section3"]}
+      className="h-full w-full"
+    >
+      <div id="section1" className="full-center">
         {/* Title / Subtitle */}
         <h1
           className={`
@@ -59,7 +62,12 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      <div className="full-center bg-slate-300">HI!</div>
-    </div>
+      <div id="section2" className="full-center bg-slate-300">
+        HI!
+      </div>
+      <div id="section3" className="full-center bg-slate-600">
+        HI!
+      </div>
+    </TrackedPage>
   );
 }

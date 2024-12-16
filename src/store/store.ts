@@ -2,11 +2,13 @@ import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import counterReducer from "./features/counter/counterSlice"
 import userDataReducer from "./features/userData/userDataSlice"
 import userPreferencesReducer from "./features/userPreferences/userPreferencesSlice"
+import pageStatsReducer from "./features/pageStats/pageStatsSlice"
 
 const rootReducer = combineReducers({
   counter: counterReducer, // Add other reducers here as your app grows
   userData: userDataReducer,
   userPreferences: userPreferencesReducer,
+  pageStats: pageStatsReducer,
 })
 
 const store = configureStore({
